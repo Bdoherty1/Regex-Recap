@@ -1,21 +1,18 @@
-# Regex Recap
 
-Regular expressions (regex) are powerful tools for pattern matching within strings in JavaScript. While JavaScript provides methods like startsWith, endsWith, and includes for basic string searches, regex offers more comprehensive and dynamic search capabilities. In this tutorial, we'll explore the intricacies of regular expressions, focusing on various components and their functionalities.
+# Validating Email Addresses with Regex
 
+In modern web applications, validating user input is crucial to ensure data integrity and security. One common validation task is to verify the format of email addresses entered by users. In this project, we'll explore various regular expressions (regex) for validating email addresses and understand their components, strengths, and considerations. From simple validations to more robust patterns conforming to RFC standards, we'll delve into each regex variation step-by-step, providing insights into their design and usage.
 
 ## Summary
 
+The regex we'll be discussing is a comprehensive pattern for validating email addresses, accommodating different levels of complexity and adherence to standards. Here's a summary of the regex pattern we'll explore:
+
+```regex
+^[A-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\.[A-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[A-Z0-9-]+(?:\.[A-Z0-9-]+)*$
+
+
 We'll be dissecting a specific regex pattern designed for basic username validation. The pattern  
-{
-	
-	"Print to console": {
-		"prefix": "log",
-		"body": [
-			"/^[a-z0-9_-]{3,16}$/"
-		],
-		"description": "code snippet"
-	}
-}
+/^[a-z0-9_-]{3,16}$/
 checks if a string fulfills the requirements for a basic username. This regex pattern ensures that the username contains lowercase letters, numbers, underscores, or hyphens and is between 3 and 16 characters long.
 ## Table of Contents
 
