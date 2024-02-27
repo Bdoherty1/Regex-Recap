@@ -5,8 +5,18 @@ Regular expressions (regex) are powerful tools for pattern matching within strin
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
-
+We'll be dissecting a specific regex pattern designed for basic username validation. The pattern  
+{
+	
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"/^[a-z0-9_-]{3,16}$/"
+		],
+		"description": "code snippet"
+	}
+}
+checks if a string fulfills the requirements for a basic username. This regex pattern ensures that the username contains lowercase letters, numbers, underscores, or hyphens and is between 3 and 16 characters long.
 ## Table of Contents
 
 - [Anchors](#anchors)
