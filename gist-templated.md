@@ -9,11 +9,7 @@ The regex we'll be discussing is a comprehensive pattern for validating email ad
 
 ```regex
 ^[A-Z0-9_!#$%&'*+/=?`{|}~^-]+(?:\.[A-Z0-9_!#$%&'*+/=?`{|}~^-]+)*@[A-Z0-9-]+(?:\.[A-Z0-9-]+)*$
-
-
-We'll be dissecting a specific regex pattern designed for basic username validation. The pattern  
-/^[a-z0-9_-]{3,16}$/
-checks if a string fulfills the requirements for a basic username. This regex pattern ensures that the username contains lowercase letters, numbers, underscores, or hyphens and is between 3 and 16 characters long.
+```
 ## Table of Contents
 
 - [Anchors](#anchors)
@@ -32,26 +28,58 @@ checks if a string fulfills the requirements for a basic username. This regex pa
 
 ### Anchors
 
+Anchors in regular expressions define points in the string where the regex engine should start or stop matching. Commonly used anchors include:
+- `^`: Matches the start of the string.
+- `$`: Matches the end of the string.
+- `\b`: Matches a word boundary.
+
 ### Quantifiers
+
+Quantifiers control the number of times a character or group in a regex can appear. Common quantifiers include:
+- `*`: Matches zero or more occurrences.
+- `+`: Matches one or more occurrences.
+- `?`: Matches zero or one occurrence.
+- `{}`: Matches a specific number of occurrences, e.g., `{3}` matches exactly three occurrences.
 
 ### OR Operator
 
+The OR operator, represented by `|`, allows for matching either one pattern or another. For example, `cat|dog` matches either "cat" or "dog".
+
 ### Character Classes
+
+Character classes specify a set of characters that can match at a particular position in the string. They are defined inside square brackets, such as `[abc]`, which matches any of the characters 'a', 'b', or 'c'.
 
 ### Flags
 
+Flags modify the behavior of a regex pattern. Common flags include:
+- `i`: Case-insensitive matching.
+- `g`: Global matching (matches all occurrences rather than stopping after the first match).
+- `m`: Multi-line matching.
+
 ### Grouping and Capturing
+
+Grouping is done with parentheses `( )` and is used to capture substrings within a match or apply quantifiers to multiple characters. Captured groups can be referenced later in the regex or in replacement patterns.
 
 ### Bracket Expressions
 
+Bracket expressions, also known as character classes, allow you to specify sets or ranges of characters to match. For example, `[a-z]` matches any lowercase letter.
+
 ### Greedy and Lazy Match
+
+Greedy matching matches as much of the string as possible, while lazy (or non-greedy) matching matches as little as possible. Greediness can be controlled with quantifiers like `*` and `+` by adding a `?` after them.
 
 ### Boundaries
 
+Boundaries, such as `\b` for word boundaries, `\B` for non-word boundaries, `^` for the start of the string, and `$` for the end of the string, define the limits where matches can occur within the string.
+
 ### Back-references
+
+Back-references allow you to reuse previously captured groups within a regex pattern. They are referenced using `\1`, `\2`, etc., where the number corresponds to the capture group.
 
 ### Look-ahead and Look-behind
 
+Look-ahead and look-behind assertions allow you to match a pattern only if it is followed or preceded by another pattern, without including the matched text in the final match result. They are represented by `(?=...)` for positive look-ahead, `(?!...)` for negative look-ahead, `(?<=...)` for positive look-behind, and `(?<!...)` for negative look-behind.
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+git@github.com:Bdoherty1
